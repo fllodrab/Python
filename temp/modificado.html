@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Practica 3 TEMPLATES</title>
+	<link rel="stylesheet" href="static/css/style.css" type="text/css">
+</head>
+<body>
+	<div id="header">
+		<div>
+			<div class="logo">
+				<a href="/">F.Llodra</a>
+			</div>
+				
+			</p>
+			<ul id="navigation">
+				<li>
+					<a href="Home">Home</a>
+				</li>
+				<li class="active">
+					<a href="modificado">Modificado</a>
+				</li>
+				<li>
+					<a href="features">Features</a>
+				</li>
+				<li>
+					<a href="news">News</a>
+				</li>
+				<li>
+					<a href="about">About</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div id="contents">
+		<div class="modificado">
+			<h1>Modificando</h1>
+				<p align="right">
+					<form method="post" action="formularioMod"> 
+						${fMod}
+					</form>
+				</p>
+		</div>
+	</div>
+	<div id="footer">
+		<div class="clearfix">
+			<div id="connect">
+				<a href="http://freewebsitetemplates.com/go/facebook/" target="_blank" class="facebook"></a><a href="http://freewebsitetemplates.com/go/googleplus/" target="_blank" class="googleplus"></a><a href="http://freewebsitetemplates.com/go/twitter/" target="_blank" class="twitter"></a><a href="http://www.freewebsitetemplates.com/misc/contact/" target="_blank" class="tumbler"></a>
+			</div>
+			<p>
+				© 2023 Fernando Llodra Belda. All Rights Reserved.
+			</p>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,4 +1,4 @@
-Python
-======
+PythonApp
+=========
 
-Aplicación de python
+Aplicación web escrita en python con API de Twitter y Google Charts y Google Maps.

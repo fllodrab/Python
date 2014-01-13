@@ -1,0 +1,127 @@
+<!DOCTYPE HTML>
+<!-- Website template by freewebsitetemplates.com -->
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Post title - Fernando Llodra Belda</title>
+	<link rel="stylesheet" href="static/css/style.css" type="text/css">
+	<!--Load the AJAX API-->
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+    
+      // Load the Visualization API and the piechart package.
+      google.load('visualization', '1.0', {'packages':['corechart']});
+      
+      // Set a callback to run when the Google Visualization API is loaded.
+      google.setOnLoadCallback(drawChart);
+
+      // Callback that creates and populates a data table, 
+      // instantiates the pie chart, passes in the data and
+      // draws it.
+      function drawChart() {
+      	var nacion = [
+      		%for i in Nacion:
+      			'${i}',
+      		%endfor
+      	];
+      	var numero = [
+      		%for i in Numero:
+      			${i},
+      		%endfor
+      	];
+
+      // Create the data table.
+      var data = new google.visualization.DataTable();
+      data.addColumn('string', 'Nacion');
+      data.addColumn('number', 'Numero');
+      
+      for(i = 0; i < nacion.length; i++)
+	      data.addRow([nacion[i], numero[i]]);
+	        <!--['Mushrooms', 3],
+	        <!--['Onions', 1],
+	        <!--['Olives', 1],
+	        <!--['Zucchini', 1],
+	        <!--['Pepperoni', 2]
+	      <!--]);
+
+      // Set chart options
+      var options = {'title':'Extranjeros en España',
+                     'width':400,
+                     'height':300};
+
+      // Instantiate and draw our chart, passing in some options.
+      var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+      chart.draw(data, options);
+    };
+    </script>
+    
+</head>
+<body>
+	<div id="header">
+		<div>
+			<div class="logo">
+				<a href="/">F.Llodra</a>
+			</div>
+			<p align="right">
+				Usuario: ${Usuario}
+				<br>
+					<a href="logout">logout</a>
+				</br>
+				
+			</p>
+
+			<ul id="navigation">
+				<li>
+					<a href="/">Home</a>
+				</li>
+				<li>
+					<a href="features">Features</a>
+				</li>
+				<li class="active">
+					<a href="news">News</a>
+				</li>
+				<li>
+         			<a href="Geomap">Map</a>
+        		</li>
+				<li>
+					<a href="about">About</a>
+				</li>
+				<li>
+					<a href="contact">Contact</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div id="contents">
+		<div class="post">
+			<div class="date">
+				<p>
+					<span>03</span>
+					2023
+				</p>
+			</div>
+			<h1>GRÁFICAS <span class="author">Fernando Llodra Belda 2013</span></h1>
+			<p>
+
+				<!--Div that will hold the pie chart-->
+    			<div id="chart_div" style="width:400; height:300"></div>
+
+			</p>
+			<p>
+				Change, add, and remove items as you like. If you're having problems editing this website template, then don't hesitate to ask for help on the Forums.
+			</p>
+			<span><a href="news" class="more">Back to News</a></span>
+		</div>
+	</div>
+	<div id="footer">
+		<div class="clearfix">
+			<div id="connect">
+				<a href="http://freewebsitetemplates.com/go/facebook/" target="_blank" class="facebook"></a><a href="http://freewebsitetemplates.com/go/googleplus/" target="_blank" class="googleplus"></a><a href="http://freewebsitetemplates.com/go/twitter/" target="_blank" class="twitter"></a><a href="http://www.freewebsitetemplates.com/misc/contact/" target="_blank" class="tumbler"></a>
+			</div>
+			<p>
+				© 2023 Fernando Llodra Belda. All Rights Reserved.
+			</p>
+		</div>
+	</div>
+</body>
+</html>

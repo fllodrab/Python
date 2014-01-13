@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Practica 3 TEMPLATES</title>
+	<link rel="stylesheet" href="static/css/style.css" type="text/css">
+</head>
+<body>
+	<div id="header">
+		<div>
+			<div class="logo">
+				<a href="/">F.Llodra</a>
+			</div>
+			<p align="right">
+				Usuario: ${Usuario}
+				<br>
+					<a href="logout">logout</a>
+				</br>
+				
+			</p>
+			<ul id="navigation">
+				<li class="active">
+					<a href="modificado1">Home</a>
+				</li>
+				<li>
+					<a href="features">Features</a>
+				</li>
+				<li>
+					<a href="news">News</a>
+				</li>
+				<li>
+					<a href="about">About</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div id="contents">
+		<div class="modificado1">
+			<h1>Registro</h1>
+			<p>
+				Usuario modificado satisfactoriamente!
+				Tus nuevos datos son:
+				${nombre}
+				${apellidos}
+				${correo_electronico}
+				${direccion}
+				${dia}
+				${mes}
+				${anio}
+				${forma_pago}
+				${password}
+				${num_visa}
+			</p>
+		</div>
+	</div>
+	<div id="footer">
+		<div class="clearfix">
+			<div id="connect">
+				<a href="http://freewebsitetemplates.com/go/facebook/" target="_blank" class="facebook"></a><a href="http://freewebsitetemplates.com/go/googleplus/" target="_blank" class="googleplus"></a><a href="http://freewebsitetemplates.com/go/twitter/" target="_blank" class="twitter"></a><a href="http://www.freewebsitetemplates.com/misc/contact/" target="_blank" class="tumbler"></a>
+			</div>
+			<p>
+				© 2023 Fernando Llodra Belda. All Rights Reserved.
+			</p>
+		</div>
+	</div>
+</body>
+</html>

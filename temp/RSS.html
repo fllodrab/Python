@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>RSS</title>
+	<link rel="stylesheet" href="static/css/style.css" type="text/css">
+</head>
+<body>
+	<div id="header">
+		<div>
+			<div class="logo">
+				<a href="/">F.Llodra</a>
+			</div>
+			<p align="right">
+				Usuario: ${Usuario}
+				<br>
+					<a href="logout">logout</a>
+				</br>
+
+			</p>
+			<ul id="navigation">
+				<li>
+					<a href="/">Home</a>
+				</li>
+				<li>
+					<a href="features">Features</a>
+				</li>
+				<li>
+					<a href="news">News</a>
+				</li>
+				<li class="active">
+					<a href="RSS">RSS</a>
+				</li>
+				<li>
+         			<a href="Geomap">Map</a>
+        		</li>
+				<li>
+					<a href="searchMap">Buscar Mapa</a>
+				<li>
+				<li>
+              		<a href="Twitter">Twitter</a>
+        		</li>
+				<li>
+					<a href="about">About</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div id="contents">
+		<div class="features">
+			<h1>RSS</h1>
+			<p align="right">
+					Número de noticias: ${contador}
+			</p>
+			<p>
+				<img src="static/images/RSS.jpg" alt="Img">
+				<p>
+				% for row in noticias:
+                	<p>
+                		<b>${row}</b>
+                	</p>
+				% endfor
+				</p>
+			</p>
+		</div>
+	</div>
+	<div id="footer">
+		<div class="clearfix">
+			<div id="connect">
+				<a href="http://freewebsitetemplates.com/go/facebook/" target="_blank" class="facebook"></a><a href="http://freewebsitetemplates.com/go/googleplus/" target="_blank" class="googleplus"></a><a href="http://freewebsitetemplates.com/go/twitter/" target="_blank" class="twitter"></a><a href="http://www.freewebsitetemplates.com/misc/contact/" target="_blank" class="tumbler"></a>
+			</div>
+			<p>
+				© 2013 Fernando Llodra Belda. All Rights Reserved.
+			</p>
+		</div>
+	</div>
+</body>
+</html>
