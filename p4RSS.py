@@ -14,7 +14,7 @@ from time import time
 import tweepy
 
 
-connection = MongoClient('ds061188	.mongolab.com', 61188)
+connection = MongoClient('ds061188.mongolab.com', 61188)
 db = connection['ivpractica3']
 db.authenticate('fllodrab','0307tecla')
 
