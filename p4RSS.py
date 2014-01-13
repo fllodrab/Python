@@ -5,6 +5,7 @@ from web.contrib.template import render_mako
 import web
 from web import form
 from pymongo import Connection
+from pymongo import MongoClient
 import pymongo
 import feedparser
 import urllib
@@ -13,6 +14,9 @@ from time import time
 import tweepy
 
 
+connection = MongoClient('ds061188	.mongolab.com', 61188)
+db = connection['ivpractica3']
+db.authenticate('fllodrab','0307tecla')
 
 # Para poder usar sesiones con web.py
 web.config.debug = False
